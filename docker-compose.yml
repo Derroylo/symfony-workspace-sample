@@ -32,3 +32,21 @@ services:
         container_name: "redis"
         ports:
             - 6379:6379
+
+    # PhpMyAdmin
+    # For more infos check: https://hub.docker.com/_/phpmyadmin
+    phpmyadmin:
+      image: phpmyadmin/phpmyadmin:latest
+      container_name: "pma"
+      restart: always
+      links:
+        - mysql
+      environment:
+        PMA_HOST: "mysql"
+        PMA_PORT: 3306
+        PMA_USER: "root"
+        PMA_PASSWORD: "gitpod"
+        UPLOAD_LIMIT: 2048M
+        PMA_PMADB: "pma"
+      ports:
+        - "8081:80"
