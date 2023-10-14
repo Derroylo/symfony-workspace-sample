@@ -5,24 +5,34 @@
 ## What is Gitpod?
 Gitpod is a cloud development environment: https://www.gitpod.io/
 
+## Available services
+Some additional services are already added via docker-compose.yml but you can add more any time.
+- [MySQL](https://www.mysql.com) - Database
+- [Mailpit](https://github.com/axllent/mailpit) - email testing tool for developers
+- [Redis](https://redis.com) - In-Memory Database used mostly for caching
+- [PhpMyAdmin](https://www.phpmyadmin.net/) - Webinterface for MySQL
+- [Adminer](https://www.adminer.org) - Webinterface for MySQL
+- [PhpCacheAdmin](https://github.com/RobiNN1/phpCacheAdmin) - Webinterface for different caching systems like redis, memcached etc.
+
+**Note:** Not all services are active per default, you can select active services via `gpt services select`
+
+## Installed Tools
+- [GPT](https://github.com/Derroylo/gitpod-tool) - An extendable Tool for web development with gitpod
+- [NVM](https://github.com/nvm-sh/nvm) - Select the active nodejs version
+
 ## Documentation
-- Gitpod https://www.gitpod.io/docs/introduction/getting-started
-- Dockerfile https://github.com/gitpod-io/workspace-images/blob/main/chunks/tool-nginx/Dockerfile
-- gitpod.yml https://www.gitpod.io/docs/references/gitpod-yml
+- [Gitpod](https://www.gitpod.io/docs/introduction/getting-started)
+- [Base of the Dockerfile](https://github.com/gitpod-io/workspace-images/blob/main/chunks/tool-nginx/Dockerfile)
+- [gitpod.yml](https://www.gitpod.io/docs/references/gitpod-yml)
+- [GPT](https://github.com/Derroylo/gitpod-tool) [GPT Documentation](https://derroylo.github.io)
 
 ## Informations
-Change the active version for PHP: https://github.com/oerdnj/deb.sury.org/wiki/Managing-Multiple-Versions
-(When you select not the newest version of PHP then you might need to install additional packages like curl, zip etc. as shown in the installation script `.devEnv/gitpod/scripts/install_symfony_demo.sh`
+- Add `/phpinfo` to the url of the frontend (`https://8000-xxxxx.ws-xx.gitpod.io/`) to show the current used php version, active modules and settings
+- Add `/xdebuginfo` to the url of the frontend (`https://8000-xxxxx.ws-xx.gitpod.io/`) to show the current xdebug settings
+- Add `/adminer` to the url of the frontend (`https://8000-xxxxx.ws-xx.gitpod.io/`) to open Adminer, an alternative to phpmyadmin
+- The installation routine of shopware can be found under `.devEnv/gitpod/scripts/symfony/install_demo.sh`
 
-Available Services:
-- MySQL (Database)
-- Mailhog (Testing of mail delivery)
-- Redis (Cache - Key-Value In-Memory Database)
-- PhpMyAdmin (Administrationinterface for MySQL)
-- PhpCacheAdmin (Administrationinterface for Redis)
+## Changelog
 
-Within the docker-compose.yml you can find these services, configure them or also add new ones.
-
-The often used phpinfo()(which shows the current PHP-Version, which modules are installed and how they are configured) can be accessed once you start the workspace and add `/phpinfo` to the webserver url (`https://8000-xxxxx.ws-xx.gitpod.io/`)
-
-The installation of the symfony demo will be done via an install script that can be found under `.devEnv/gitpod/scripts/install_symfony_demo.sh`
+### 14.10.2023
+- Updated everything to the latest version
