@@ -1,3 +1,6 @@
+> [!NOTE]
+> These examples were written for Gitpod classic, which will shutdown shortly. Templates for the successor of gpt, can be found under this [link](https://github.com/Derroylo/devcontainer-examples).
+
 # Symfony 6 workspace template for gitpod.io
 
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/derroylo/symfony-workspace-sample)
